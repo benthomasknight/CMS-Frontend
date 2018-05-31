@@ -20,15 +20,16 @@ export class MainNavComponent {
     // For any seach control value changes, filter the menu options
     this.searchControl.valueChanges
       .pipe(
-        startWith('')
-        ,debounceTime(250)
-        ,map(query => {
+        startWith('') // No query at the beginning
+        ,debounceTime(250) // Only search after 250ms of no typing
+        ,map(query => { // Clear the menu
           this.menus = [];
           return query;
         })
         ,map(query => {
-          // Filter the menu and set the menu to equal it
-          this.mainNavService.getNavigation(query).subscribe(res => this.menus.push(res))
+          // Filter the full menu with the new search string
+          this.mainNavService.getNavigation(query)
+          .subscribe(res => this.menus.push(res)) // Push each result that passed to the array
           return query;
         })
       ).subscribe();
