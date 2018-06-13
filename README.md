@@ -22,6 +22,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Specification
+
+### Caching
+
+The cache needs to be independent of each concurrent instance if possible. This will minimise the amount of space the cache will take so that more things can be cached.
+
+### Defaults
+
+The very basic default menus/systems should be the users, security, tables and menus. This will allow anything else to be added in to the system.

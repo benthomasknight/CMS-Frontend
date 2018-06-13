@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MenuOption } from './menu-option';
 import { Observable, from } from 'rxjs';
-import { filter, concatAll, map } from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

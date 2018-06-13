@@ -3,8 +3,8 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { MenuOption } from './menu-option';
 import { Observable, from } from 'rxjs';
 import { MainNavService } from './main-nav.service';
-import { concatMap, debounceTime, filter, first, concatAll, map, startWith } from 'rxjs/operators';
-import { FormControl, FormControlName } from '@angular/forms';
+import { debounceTime, map, startWith } from 'rxjs/operators';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'main-nav',
